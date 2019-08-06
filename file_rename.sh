@@ -10,7 +10,7 @@ for file in `\find . -maxdepth 1 -name '*.jpg' -type f`; do
     cp $file $file.bak
     oFilename="$prefix_filename`printf "%03d" $count`$file_extension"
     #リネーム
-    ./test.exe $file $oFilename
+    ./filerename $file $oFilename
 
     count=`expr $count + 1`
 done
